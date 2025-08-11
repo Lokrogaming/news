@@ -1,0 +1,25 @@
+[
+  {
+    "icon": "bell",
+    "author": "System",
+    "message": "Wartungsarbeiten heute um 20 Uhr",
+    "type": "popup",
+    "color": "#ff9900",
+    "urgent": true
+  },
+  {
+    "icon": "info-circle",
+    "message": "Neue Version 1.2.3 veröffentlicht",
+    "type": "news",
+    "color": "#3498db",
+    "urgent": false
+  },
+  {
+    "icon": "exclamation-triangle",
+    "author": "Admin",
+    "message": "Sicherheitsupdate verfügbar – bitte sofort installieren",
+    "type": "news",
+    "color": "darkred",
+    "urgent": true
+  }
+]
