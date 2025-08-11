@@ -5,7 +5,7 @@
     "message": "Wartungsarbeiten heute um 20 Uhr",
     "type": "popup",
     "color": "#ff9900",
-    "urgent": true
+    "tag": "dringend"
   },
   {
     "icon": "info-circle",
