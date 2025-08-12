@@ -29,7 +29,8 @@
     "icon": "discord",
     "author": "Lokrogamer",
     "type": "news",
-    "message": "Komme jetzt auf unseren Discord! <a href='dcs.lol/lokrogaming'>Discord</a>"
+    "message": "Komme jetzt auf unseren Discord!",
+    "link": "https://dcs.lol/lokrogaming"
   }
   
 ]
