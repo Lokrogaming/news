@@ -3,39 +3,20 @@
     "icon": "megaphone",
     "author": "Server",
     "type": "news",
-    "tag": "dringend",
+    "urgent": true,
     "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!"
   },
-  {
-    "icon": "twitch",
-    "author": "Lokrogamer",
-    "type": "news",
-    "message": "Aktuell keine Streams, da ich im Urlaub bin"[
-  {
-    "icon": "megaphone",
-    "author": "Server",
-    "type": "news",
-    "tag": "dringend",
-    "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!"
-  }
-  {
-    "icon": "twitch",
-    "author": "Lokrogamer",
-    "type": "news",
-    "message": "Aktuell keine Streams, da ich im Urlaub bin"
-  },
+
   {
     "icon": "whatsapp",
     "author": "System",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
     "type": "popup"
-  }
-]
-  }
+  },
   {
-    "icon": "whatsapp",
-    "author": "System",
-    "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
-    "type": "popup"
+    "icon": "twitch",
+    "author": "Lokrogamer",
+    "type": "news",
+    "message": "Leider aktuell keine Streams, da ich im Urlaub bin."
   }
 ]
