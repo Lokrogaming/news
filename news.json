@@ -5,11 +5,17 @@
     "type": "news",
     "tag": "dringend",
     "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!"
-}
+  }
+  {
+    "icon": "twitch",
+    "author": "Lokrogamer",
+    "type": "news",
+    "message": "Aktuell keine Streams, da ich im Urlaub bin"
+  }
   {
     "icon": "whatsapp",
     "author": "System",
-    "message": "Komm jetzt in unsere Gruppe!",
+    "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
     "type": "popup"
   }
 ]
