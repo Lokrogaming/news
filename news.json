@@ -10,7 +10,8 @@
     "icon": "whatsapp",
     "author": "System",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
-    "type": "popup"
+    "type": "popup",
+    "link": "https://whatsapp.com/channel/0029VbAJwgOI7BeHXOWkiR1c"
   },
   {
     "icon": "twitch",
