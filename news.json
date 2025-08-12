@@ -17,5 +17,13 @@
     "author": "Lokrogamer",
     "type": "news",
     "message": "Leider aktuell keine Streams, da ich im Urlaub bin."
+  },
+  {
+    "icon": "bell",
+    "author": "System",
+    "urgent": true,
+    "message": "Großes Webupdate incoming! Style wird auf alle restlichen Sites angewendet",
+    "type": "popup"
   }
+  
 ]
