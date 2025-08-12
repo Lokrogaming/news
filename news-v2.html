@@ -176,6 +176,24 @@
     from {opacity: 0; transform: translateX(100%);}
     to {opacity: 1; transform: translateX(0);}
   }
+  .close-btn {
+  position: absolute;
+  top: 20px;      /* weiter nach unten für besseres Klicken */
+  right: 20px;    /* rechts oben */
+  cursor: pointer;
+  font-size: 2rem; /* größer */
+  color: #888;     /* grauer Ton */
+  user-select: none;
+  z-index: 10001;  /* damit er über allem liegt */
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #ccc;    /* helleres Grau beim Hover/Focus */
+  outline: none;
+}
+
 </style>
 </head>
 <body>
