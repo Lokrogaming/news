@@ -47,12 +47,8 @@
     border-radius: 50%;
   }
   @keyframes rotate_3922 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   /* Dark Mode */
@@ -68,9 +64,7 @@
     color: #84cdfa;
     text-decoration: none;
   }
-  a:hover {
-    text-decoration: underline;
-  }
+  a:hover { text-decoration: underline; }
   #content {
     display: none;
     max-width: 700px;
@@ -88,24 +82,21 @@
     animation: fadeIn 0.7s ease forwards;
     word-break: break-word;
   }
-  .message-box.urgent {
-    border: 2px solid #e74c3c;
-  }
+  .message-box.urgent { border: 2px solid #e74c3c; }
   .message-icon {
     font-size: 1.8rem;
     color: #84cdfa;
     flex-shrink: 0;
     margin-top: 0.15rem;
   }
-  .message-content {
-    flex-grow: 1;
-  }
+  .message-content { flex-grow: 1; }
   .message-author {
     font-style: italic;
     color: #bbb;
     margin-top: 0.25rem;
     font-size: 0.9rem;
   }
+
   /* Popup Styles */
   #popup {
     position: fixed;
@@ -122,9 +113,7 @@
     color: #eee;
     word-break: break-word;
   }
-  #popup.urgent {
-    border: 2px solid #e74c3c;
-  }
+  #popup.urgent { border: 2px solid #e74c3c; }
   #popup .close-btn {
     position: absolute;
     top: 6px;
@@ -158,9 +147,7 @@
     margin-right: 1rem;
     user-select: none;
   }
-  #settings input[type=checkbox] {
-    margin-right: 0.3rem;
-  }
+  #settings input[type=checkbox] { margin-right: 0.3rem; }
 
   /* Popup List Button */
   #popup-list-btn {
@@ -189,41 +176,22 @@
     from {opacity: 0; transform: translateX(100%);}
     to {opacity: 1; transform: translateX(0);}
   }
-  
   .close-btn {
-    position: absolute;
-    top: 6px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #bbb;
-    user-select: none;
-  }
-  .shiny-gold-text {
-  font-weight: bold;
-  font-size: 2rem;
-  background: linear-gradient(
-    45deg,
-    #d4af37,
-    #fff5b1,
-    #d4af37,
-    #fff5b1,
-    #d4af37
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
-  text-shadow: 0 0 5px #d4af37, 0 0 10px #ffd700;
+  position: absolute;
+  top: 20px;      /* weiter nach unten für besseres Klicken */
+  right: 20px;    /* rechts oben */
+  cursor: pointer;
+  font-size: 2rem; /* größer */
+  color: #888;     /* grauer Ton */
+  user-select: none;
+  z-index: 10001;  /* damit er über allem liegt */
+  transition: color 0.3s ease;
 }
 
-@keyframes shine {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+.close-btn:hover,
+.close-btn:focus {
+  color: #ccc;    /* helleres Grau beim Hover/Focus */
+  outline: none;
 }
 
 </style>
@@ -258,7 +226,7 @@
   <div class="message-author" id="popup-author"></div>
 </div>
 
-<!-- Button zum Öffnen Popup Liste, wenn Popups deaktiviert sind -->
+<!-- Button zum Öffnen Popup Liste -->
 <button id="popup-list-btn" title="Popup-Liste anzeigen" aria-label="Popup-Liste anzeigen">📋</button>
 
 <script>
@@ -279,17 +247,12 @@
   let messages = [];
   let currentPopupIndex = 0;
 
-  // Einstellungen laden oder default
-  let settings = {
-    popupsEnabled: true,
-  };
+  let settings = { popupsEnabled: true };
 
   function loadSettings() {
     try {
       const saved = localStorage.getItem("newsSettings");
-      if (saved) {
-        settings = JSON.parse(saved);
-      }
+      if (saved) settings = JSON.parse(saved);
     } catch {}
     togglePopupsCheckbox.checked = settings.popupsEnabled;
   }
@@ -298,8 +261,6 @@
     localStorage.setItem("newsSettings", JSON.stringify(settings));
   }
 
-  // Icons per Bootstrap Icons class map
-  // Fallback bi-info-circle
   function getIconClass(name) {
     if (!name) return "bi-info-circle";
     const knownIcons = [
@@ -310,36 +271,40 @@
     return knownIcons.includes(name) ? "bi-" + name : "bi-info-circle";
   }
 
-  // Nachricht HTML bauen
   function createMessageBox(msg) {
     const box = document.createElement("div");
     box.classList.add("message-box");
     if (msg.urgent) box.classList.add("urgent");
 
-    // Icon
     const icon = document.createElement("i");
     icon.className = "message-icon bi " + getIconClass(msg.icon);
     box.appendChild(icon);
 
-    // Content
-    const content = document.createElement("div");
-    content.classList.add("message-content");
+    const contentDiv = document.createElement("div");
+    contentDiv.classList.add("message-content");
 
     const textNode = document.createElement("div");
-    textNode.textContent = msg.message || "Kein Text vorhanden";
-    content.appendChild(textNode);
+    if (msg.link) {
+      const linkEl = document.createElement("a");
+      linkEl.href = msg.link;
+      linkEl.target = "_blank";
+      linkEl.rel = "noopener noreferrer";
+      linkEl.textContent = msg.message || "Kein Text vorhanden";
+      textNode.appendChild(linkEl);
+    } else {
+      textNode.textContent = msg.message || "Kein Text vorhanden";
+    }
+    contentDiv.appendChild(textNode);
 
     const authorNode = document.createElement("div");
     authorNode.classList.add("message-author");
     authorNode.textContent = msg.author || "Unbekannter Autor";
-    content.appendChild(authorNode);
+    contentDiv.appendChild(authorNode);
 
-    box.appendChild(content);
-
+    box.appendChild(contentDiv);
     return box;
   }
 
-  // Popup anzeigen
   function showPopup(index) {
     if (!settings.popupsEnabled) return;
     if (index >= messages.length) {
@@ -347,29 +312,30 @@
       return;
     }
     const msg = messages[index];
-    popupText.textContent = msg.message || "";
+    popupText.innerHTML = "";
+    if (msg.link) {
+      const linkEl = document.createElement("a");
+      linkEl.href = msg.link;
+      linkEl.target = "_blank";
+      linkEl.rel = "noopener noreferrer";
+      linkEl.textContent = msg.message || "";
+      popupText.appendChild(linkEl);
+    } else {
+      popupText.textContent = msg.message || "";
+    }
     popupAuthor.textContent = msg.author || "";
-    popup.className = "urgent" in msg && msg.urgent ? "urgent" : "";
+    popup.className = msg.urgent ? "urgent" : "";
     popupIcon.className = "message-icon bi " + getIconClass(msg.icon);
     popup.style.display = "block";
     currentPopupIndex = index;
   }
 
-  // Popup schließen
-  function closePopup() {
-    popup.style.display = "none";
-  }
-
-  // Nächste Popup-Nachricht anzeigen
+  function closePopup() { popup.style.display = "none"; }
   function nextPopup() {
     let nextIndex = currentPopupIndex + 1;
-    if (nextIndex >= messages.length) {
-      nextIndex = 0;
-    }
+    if (nextIndex >= messages.length) nextIndex = 0;
     showPopup(nextIndex);
   }
-
-  // Popup Liste anzeigen, wenn Popups deaktiviert sind
   function showPopupList() {
     if (messages.length === 0) return;
     let listText = "";
@@ -379,7 +345,6 @@
     alert("Nachrichten:\n\n" + listText);
   }
 
-  // Nachrichten laden und anzeigen
   async function loadMessages() {
     try {
       const res = await fetch(API_URL);
@@ -387,16 +352,9 @@
       const data = await res.json();
       messages = Array.isArray(data) ? data : [];
       messagesDiv.innerHTML = "";
-      messages.forEach(msg => {
-        const box = createMessageBox(msg);
-        messagesDiv.appendChild(box);
-      });
-
-      // Wenn Popups aktiviert sind, erstes Popup zeigen
-      if (settings.popupsEnabled && messages.length > 0) {
-        showPopup(0);
-      }
-    } catch (e) {
+      messages.forEach(msg => messagesDiv.appendChild(createMessageBox(msg)));
+      if (settings.popupsEnabled && messages.length > 0) showPopup(0);
+    } catch {
       messagesDiv.textContent = "Fehler beim Laden der Nachrichten.";
     } finally {
       loader.style.display = "none";
@@ -405,7 +363,6 @@
     }
   }
 
-  // Event Listener
   closeBtn.addEventListener("click", closePopup);
   closeBtn.addEventListener("keydown", e => {
     if (e.key === "Enter" || e.key === " ") {
@@ -413,9 +370,7 @@
       closePopup();
     }
   });
-
   popupListBtn.addEventListener("click", showPopupList);
-
   togglePopupsCheckbox.addEventListener("change", () => {
     settings.popupsEnabled = togglePopupsCheckbox.checked;
     saveSettings();
@@ -428,14 +383,12 @@
     }
   });
 
-  // Popup automatisch alle 7 Sekunden weiterschalten, wenn aktiviert
   setInterval(() => {
     if (settings.popupsEnabled && messages.length > 0 && popup.style.display === "block") {
       nextPopup();
     }
   }, 7000);
 
-  // Init
   loadSettings();
   loadMessages();
 })();
