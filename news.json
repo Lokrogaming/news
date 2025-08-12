@@ -24,6 +24,12 @@
     "urgent": true,
     "message": "Großes Webupdate incoming! Style wird auf alle restlichen Sites angewendet",
     "type": "popup"
+  },
+  {
+    "icon": "discord",
+    "author": "Lokrogamer",
+    "type": "news",
+    "message": "Komme jetzt auf unseren Discord! <a href='dcs.lol/lokrogaming'>Discord</a>"
   }
   
 ]
