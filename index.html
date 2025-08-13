@@ -27,13 +27,7 @@
     animation: rotate_3922 1.2s linear infinite;
     background: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
   }
-  .container span {
-    position: absolute;
-    border-radius: 50%;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
-  }
+  .container span { position: absolute; border-radius: 50%; height: 100%; width: 100%; background: linear-gradient(#9b59b6, #84cdfa, #5ad1cd); }
   .container span:nth-of-type(1) { filter: blur(5px); }
   .container span:nth-of-type(2) { filter: blur(10px); }
   .container span:nth-of-type(3) { filter: blur(25px); }
@@ -46,153 +40,39 @@
     border: solid 5px #121212;
     border-radius: 50%;
   }
-  @keyframes rotate_3922 {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+  @keyframes rotate_3922 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
   /* Dark Mode */
-  body {
-    background-color: #121212;
-    color: #eee;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 1rem;
-    min-height: 100vh;
-  }
-  a {
-    color: #84cdfa;
-    text-decoration: none;
-  }
+  body { background-color: #121212; color: #eee; font-family: Arial, sans-serif; margin: 0; padding: 1rem; min-height: 100vh; }
+  a { color: #84cdfa; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  #content {
-    display: none;
-    max-width: 700px;
-    margin: auto;
-  }
-  .message-box {
-    background: #222;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 8px #0008;
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-    animation: fadeIn 0.7s ease forwards;
-    word-break: break-word;
-  }
+  #content { display: none; max-width: 700px; margin: auto; }
+  .message-box { background: #222; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 0 8px #0008; display: flex; gap: 0.75rem; align-items: flex-start; animation: fadeIn 0.7s ease forwards; word-break: break-word; }
   .message-box.urgent { border: 2px solid #e74c3c; }
-  .message-icon {
-    font-size: 1.8rem;
-    color: #84cdfa;
-    flex-shrink: 0;
-    margin-top: 0.15rem;
-  }
+  .message-icon { font-size: 1.8rem; color: #84cdfa; flex-shrink: 0; margin-top: 0.15rem; }
   .message-content { flex-grow: 1; }
-  .message-author {
-    font-style: italic;
-    color: #bbb;
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
-  }
+  .message-author { font-style: italic; color: #bbb; margin-top: 0.25rem; font-size: 0.9rem; }
 
   /* Popup Styles */
-  #popup {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #222;
-    border-radius: 8px;
-    box-shadow: 0 0 15px #000a;
-    max-width: 320px;
-    padding: 1rem 1.5rem 1rem 1rem;
-    display: none;
-    z-index: 10000;
-    animation: slideIn 0.5s ease forwards;
-    color: #eee;
-    word-break: break-word;
-  }
+  #popup { position: fixed; top: 20px; right: 20px; background: #222; border-radius: 8px; box-shadow: 0 0 15px #000a; max-width: 320px; padding: 1rem 1.5rem 1rem 1rem; display: none; z-index: 10000; animation: slideIn 0.5s ease forwards; color: #eee; word-break: break-word; }
   #popup.urgent { border: 2px solid #e74c3c; }
-  #popup .close-btn {
-    position: absolute;
-    top: 6px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #bbb;
-    user-select: none;
-  }
-  #popup .message-icon {
-    font-size: 1.6rem;
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    color: #84cdfa;
-  }
-  #popup .message-author {
-    font-style: italic;
-    color: #bbb;
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
-  }
+  #popup .close-btn { position: absolute; top: 6px; right: 10px; cursor: pointer; font-size: 1.2rem; color: #bbb; user-select: none; }
+  #popup .message-icon { font-size: 1.6rem; vertical-align: middle; margin-right: 0.5rem; color: #84cdfa; }
+  #popup .message-author { font-style: italic; color: #bbb; margin-top: 0.4rem; font-size: 0.85rem; }
 
   /* Settings Panel */
-  #settings {
-    background: #222;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  #settings label {
-    margin-right: 1rem;
-    user-select: none;
-  }
+  #settings { background: #222; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+  #settings label { margin-right: 1rem; user-select: none; }
   #settings input[type=checkbox] { margin-right: 0.3rem; }
 
   /* Popup List Button */
-  #popup-list-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #333;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    color: #eee;
-    font-size: 1.8rem;
-    cursor: pointer;
-    box-shadow: 0 0 10px #000a;
-    z-index: 10000;
-  }
+  #popup-list-btn { display: none; position: fixed; bottom: 20px; right: 20px; background: #333; border: none; border-radius: 50%; width: 48px; height: 48px; color: #eee; font-size: 1.8rem; cursor: pointer; box-shadow: 0 0 10px #000a; z-index: 10000; }
 
   /* Animations */
-  @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-  @keyframes slideIn {
-    from {opacity: 0; transform: translateX(100%);}
-    to {opacity: 1; transform: translateX(0);}
-  }
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #888;
-    user-select: none;
-    transition: color 0.3s ease;
-    z-index: 1001;
-  }
-  .close-btn:hover,
-  .close-btn:focus {
-    color: #ccc;
-    outline: none;
-  }
-
+  @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+  @keyframes slideIn { from {opacity: 0; transform: translateX(100%);} to {opacity: 1; transform: translateX(0);} }
+  .close-btn { position: absolute; top: 20px; right: 20px; cursor: pointer; font-size: 2rem; color: #888; user-select: none; transition: color 0.3s ease; z-index: 1001; }
+  .close-btn:hover, .close-btn:focus { color: #ccc; outline: none; }
 </style>
 </head>
 <body>
@@ -245,7 +125,6 @@
 
   let messages = [];
   let currentPopupIndex = 0;
-
   let settings = { popupsEnabled: true };
 
   function loadSettings() {
@@ -256,16 +135,11 @@
     togglePopupsCheckbox.checked = settings.popupsEnabled;
   }
 
-  function saveSettings() {
-    localStorage.setItem("newsSettings", JSON.stringify(settings));
-  }
+  function saveSettings() { localStorage.setItem("newsSettings", JSON.stringify(settings)); }
 
   function getIconClass(name) {
     if (!name) return "bi-info-circle";
-    const knownIcons = [
-      "alarm", "bell", "chat", "info-circle", "exclamation-triangle", "exclamation-circle",
-      "check-circle", "calendar", "calendar-event", "envelope", "star", "gear", "lightning"
-    ];
+    const knownIcons = ["alarm","bell","chat","info-circle","exclamation-triangle","exclamation-circle","check-circle","calendar","calendar-event","envelope","star","gear","lightning"];
     return knownIcons.includes(name) ? `bi-${name}` : "bi-info-circle";
   }
 
@@ -274,18 +148,19 @@
     popupText.textContent = message.text;
     popupAuthor.textContent = message.author || "";
     popup.className = "";
-    popup.classList.add(message.urgent ? "urgent" : "");
+    if(message.urgent) popup.classList.add("urgent");
     popupIcon.className = "message-icon bi " + getIconClass(message.icon);
     popup.style.display = "block";
   }
 
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-  closeBtn.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") popup.style.display = "none"; });
+  function closePopup() { popup.style.display = "none"; }
+
+  closeBtn.addEventListener("click", closePopup);
+  closeBtn.addEventListener("keypress", e => { if(e.key==="Enter") closePopup(); });
 
   popupListBtn.addEventListener("click", () => {
-    if (messages.length) showPopup(messages[currentPopupIndex++ % messages.length]);
+    if(messages.length) showPopup(messages[currentPopupIndex]);
+    currentPopupIndex = (currentPopupIndex + 1) % messages.length;
   });
 
   togglePopupsCheckbox.addEventListener("change", () => {
@@ -293,50 +168,56 @@
     saveSettings();
   });
 
-  function createMessageBox(msg) {
+  function createMessageBox(message) {
     const box = document.createElement("div");
-    box.className = "message-box";
-    if (msg.urgent) box.classList.add("urgent");
+    box.className = "message-box" + (message.urgent ? " urgent" : "");
+    box.tabIndex = 0;
 
     const icon = document.createElement("i");
-    icon.className = "message-icon bi " + getIconClass(msg.icon);
+    icon.className = "message-icon bi " + getIconClass(message.icon);
     box.appendChild(icon);
 
     const content = document.createElement("div");
     content.className = "message-content";
-    content.textContent = msg.text;
+    content.textContent = message.text;
+    box.appendChild(content);
 
-    if (msg.author) {
+    if (message.author) {
       const author = document.createElement("div");
       author.className = "message-author";
-      author.textContent = msg.author;
-      content.appendChild(author);
+      author.textContent = message.author;
+      box.appendChild(author);
     }
 
-    box.appendChild(content);
     return box;
   }
 
-  async function fetchNews() {
+  async function loadMessages() {
     try {
       const res = await fetch(API_URL);
       messages = await res.json();
-      messagesDiv.innerHTML = "";
       messages.forEach(msg => messagesDiv.appendChild(createMessageBox(msg)));
-    } catch (err) {
-      console.error(err);
-      messagesDiv.innerHTML = "<p>Nachrichten konnten nicht geladen werden.</p>";
-    } finally {
+
+      // Popup Button nur bei Nachrichten
+      if(messages.length) popupListBtn.style.display = "block";
+
+    } catch(e) { console.error("Fehler beim Laden der Nachrichten:", e); }
+  }
+
+  function init() {
+    loadSettings();
+    loadMessages().finally(() => {
       loader.style.display = "none";
       content.style.display = "block";
       content.focus();
-    }
+    });
   }
 
-  loadSettings();
-  fetchNews();
+  init();
 })();
 </script>
+
 </body>
 </html>
+
 
