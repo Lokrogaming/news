@@ -1,5 +1,11 @@
 [
   {
+    "icon": "star",
+    "author": "Management",
+    "type": "news",
+    "message": "Ein Shoutout geht raus, an Eministar"
+  },
+  {
     "icon": "megaphone",
     "author": "Server",
     "type": "news",
