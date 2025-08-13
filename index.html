@@ -200,6 +200,7 @@
     try {
       const res = await fetch(API_URL);
       messages = await res.json();
+      console.log(messages);
       messages.forEach(msg => messagesDiv.appendChild(createMessageBox(msg)));
 
       // Popup Button nur bei Nachrichten
