@@ -1,44 +1,52 @@
 [
   {
-    "icon": "star",
     "author": "Management",
-    "type": "news",
+    "icon": "star",
     "message": "Ein Shoutout geht raus, an Eministar",
-    "link": "https://star-dev.xyz"
+    "urgend": false,
+    "type": "news"
   },
   {
-    "icon": "megaphone",
+    "author": "Management",
+    "icon": "star",
+    "message": "Ein großes Danke geht raus an Amina, die ich im Urlaub kennengelernt habe. Bleib so nett wie du bist!",
+    "urgend": false,
+    "type": "news"
+  },
+  {
     "author": "Server",
-    "type": "news",
-    "urgent": true,
-    "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!"
+    "icon": "megaphone",
+    "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!",
+    "urgend": false,
+    "type": "news"
   },
   {
+    "author": "System",
     "icon": "whatsapp",
-    "author": "System",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
-    "type": "popup",
-    "link": "https://whatsapp.com/channel/0029VbAJwgOI7BeHXOWkiR1c"
-  },
-  {
-    "icon": "twitch",
-    "author": "Lokrogamer",
-    "type": "news",
-    "message": "Leider aktuell keine Streams, da ich im Urlaub bin."
-  },
-  {
-    "icon": "bell",
-    "author": "System",
-    "urgent": true,
-    "message": "Großes Webupdate incoming! Style wird auf alle restlichen Sites angewendet",
+    "urgend": false,
     "type": "popup"
   },
   {
-    "icon": "discord",
     "author": "Lokrogamer",
-    "type": "news",
+    "icon": "twitch",
+    "message": "Leider aktuell keine Streams, da ich im Urlaub bin.",
+    "urgend": false,
+    "type": "news"
+  },
+  {
+    "author": "System",
+    "icon": "bell",
+    "message": "Großes Webupdate incoming! Style wird auf alle restlichen Sites angewendet",
+    "urgend": false,
+    "type": "popup"
+  },
+  {
+    "author": "Lokrogamer",
+    "icon": "discord",
     "message": "Komme jetzt auf unseren Discord!",
-    "link": "https://dcs.lol/lokrogaming"
+    "urgend": false,
+    "type": "news"
   }
-  
 ]
+  
