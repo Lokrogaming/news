@@ -1,4 +1,5 @@
-[
+
+  [
   {
     "author": "Management",
     "icon": "star",
@@ -14,11 +15,18 @@
     "type": "news"
   },
   {
-    "author": "Server",
-    "icon": "megaphone",
-    "message": "Website weite Wartungsarbeiten heute Abend um 20 Uhr bis 22 Uhr!",
+    "author": "Management",
+    "icon": "star",
+    "message": "Ein Shoutout geht raus, an meinen guten Freund Reu (Flo)!",
     "urgend": false,
     "type": "news"
+  },
+  {
+    "author": "Server",
+    "icon": "megaphone",
+    "message": "Website geht morgen und voraussichtlich übermorgen offline, wegen Wartungsarbeiten und Updates!",
+    "urgend": true,
+    "type": "popup"
   },
   {
     "author": "System",
@@ -49,4 +57,3 @@
     "type": "news"
   }
 ]
-  
