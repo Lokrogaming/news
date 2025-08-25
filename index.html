@@ -368,7 +368,8 @@
     } finally {
       loader.style.display = "none";
       content.style.display = "block";
-      content.focus();
+      content.focus({preventScroll: true});
+
     }
   }
 
