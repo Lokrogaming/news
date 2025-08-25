@@ -7,6 +7,13 @@
     "type": "popup"
   },
   {
+    "author": "Server",
+    "icon": "megaphone",
+    "message": "Website ab dem 25.8 um 18:30 bis 26.8 um 14:00 vorübergehend online und aufrufbar",
+    "urgend": true,
+    "type": "news"
+  },
+  {
     "author": "System",
     "icon": "whatsapp",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
