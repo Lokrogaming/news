@@ -1,26 +1,4 @@
-
-  [
-  {
-    "author": "Management",
-    "icon": "star",
-    "message": "Ein Shoutout geht raus, an Eministar",
-    "urgend": false,
-    "type": "news"
-  },
-  {
-    "author": "Management",
-    "icon": "star",
-    "message": "Ein großes Danke geht raus an Amina, die ich im Urlaub kennengelernt habe. Bleib so nett wie du bist!",
-    "urgend": false,
-    "type": "news"
-  },
-  {
-    "author": "Management",
-    "icon": "star",
-    "message": "Ein Shoutout geht raus, an meinen guten Freund Reu (Flo)!",
-    "urgend": false,
-    "type": "news"
-  },
+[
   {
     "author": "Server",
     "icon": "megaphone",
@@ -34,13 +12,6 @@
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
     "urgend": false,
     "type": "popup"
-  },
-  {
-    "author": "Lokrogamer",
-    "icon": "twitch",
-    "message": "Leider aktuell keine Streams, da ich im Urlaub bin.",
-    "urgend": false,
-    "type": "news"
   },
   {
     "author": "System",
