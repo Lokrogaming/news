@@ -1,32 +1,12 @@
 [
   {
-    "author": "Server",
-    "icon": "megaphone",
-    "message": "Website geht morgen und voraussichtlich übermorgen offline, wegen Wartungsarbeiten und Updates!",
-    "urgend": true,
-    "type": "popup"
-  },
-  {
-    "author": "Server",
-    "icon": "megaphone",
-    "message": "Website ab dem 25.8 um 18:30 bis 26.8 um 14:00 vorübergehend online und aufrufbar",
-    "urgend": true,
-    "type": "news"
-  },
-  {
     "author": "System",
     "icon": "whatsapp",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
     "urgend": false,
     "type": "popup"
   },
-  {
-    "author": "System",
-    "icon": "bell",
-    "message": "Großes Webupdate incoming! Style wird auf alle restlichen Sites angewendet",
-    "urgend": false,
-    "type": "popup"
-  },
+  
   {
     "author": "Lokrogamer",
     "icon": "discord",
