@@ -1,12 +1,18 @@
 [
   {
+    "author": "Lokrogamer",
+    "icon": "alarm-fill",
+    "message": "Eilmeldung:\nAlle Websites die auf uns weiterleiten, müssen bis zum 30.9 angemeldet werden! Alle die nicht angemeldet sind, werden gemeldet und systematisch von der Website ausgeschlossen",
+    "urgend": true,
+    "type": "news"
+  },
+  {
     "author": "System",
     "icon": "whatsapp",
     "message": "Komm jetzt in unsere Gruppe! Link im Hauptmenü in der Navigationsleiste!",
     "urgend": false,
     "type": "popup"
   },
-  
   {
     "author": "Lokrogamer",
     "icon": "discord",
