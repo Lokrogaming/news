@@ -13,5 +13,12 @@
     "message": "Komme jetzt auf unseren Discord!",
     "urgend": false,
     "type": "news"
+  },
+  {
+    "author": "Lokrogamer",
+    "icon": "exclamation-mark",
+    "message": "Es steht eines der größten Updates unserer News Seite bevor. Zur Reaktivierung wollen wir nocheinmal Vollgas geben und uns an einen neuen Style sowie neue Funktionen rantasten. Mit einem Jahr neugelerntem Wissen, werden wir uns an alte und neue Funktionen setzen, die damals als unmöglich herabgestuft wurden. Daher feiert mit uns die Reaktivierung!",
+    "urgend": false,
+    "type": "news"
   }
 ]
